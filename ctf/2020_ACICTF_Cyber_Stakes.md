@@ -7,6 +7,10 @@
 
 [Over Time: Paid - 50](https://rbf-shadowhunter.github.io/ctf/2020_ACICTF_Cyber_Stakes/overtimepaid.html)
 
+## Reverse Engineering:
+
+[National Dex #65 - 100](https://rbf-shadowhunter.github.io/ctf/2020_ACICTF_Cyber_Stakes/nationaldex65.html)
+
 ## Miscellaneous:
 
 [All Your Base Are Belong To Us - 50](https://rbf-shadowhunter.github.io/ctf/2020_ACICTF_Cyber_Stakes/allyourbase.html)
