@@ -1,8 +1,7 @@
----
-title: RBF-Shadowhunter
+title: "RBF-Shadowhunter"
 layout: template
 filename: index.md
----
+permalink: /
 
 ## RBF-ShadowHunter
 
