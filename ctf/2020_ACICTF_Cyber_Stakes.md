@@ -3,6 +3,8 @@
 
 ## Cryptography:
 
+[Really Senseless Admins - 35](https://rbf-shadowhunter.github.io/ctf/2020_ACICTF_Cyber_Stakes/reallysenselessadmins.html)
+
 [Over Time: Paid - 50](https://rbf-shadowhunter.github.io/ctf/2020_ACICTF_Cyber_Stakes/overtimepaid.html)
 
 ## Miscellaneous:
