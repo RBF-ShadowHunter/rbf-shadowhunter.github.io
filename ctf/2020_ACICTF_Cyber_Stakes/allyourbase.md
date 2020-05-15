@@ -1,9 +1,3 @@
----
-title: "[50] All Your Base Are Belong To Us (Miscellaneous)"
-layout: template
-filename: allyourbase.md
----
-
 ## [50] All Your Base Are Belong To Us (Miscellaneous)
 
 ### Prompt:
