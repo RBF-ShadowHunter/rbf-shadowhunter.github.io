@@ -1,4 +1,5 @@
-## [50] Over Time: Paid
+## [50] Over Time: Paid (Cryptography)
+
 ### Prompt:
 
 After many months of hard work by our agents, we've gained access to a sensitive payroll document from a competitor. Unfortunately, it looks heavily encrypted. document.encrypted source.py
