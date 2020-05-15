@@ -27,7 +27,7 @@ RSA leverages properties of prime numbers to institute simple and unique encrypt
 
 Given two distinct primes, _p_ and _q_, **_n_ = _p_ x _q_** [Eq. 1] and the totient is **_phi_ = (_p_-1)(_q_-1)** [Eq. 2].  Also, _e_ is the public key exponent integer chosen where **1 < e < phi** such that gcd(e,phi) == 1 and _d_ is the private key exponent integer chosen where **1 < d < phi** such that **e x d == 1 % phi**.
 
-Additionally, since **_cipher_ = _plaintext_^_e_ % _n_** [Eq. 3] then one may decrypt with the private key as such **_plaintext_** = _cipher_^_d_ % _n_** [Eq. 4].
+Additionally, since **_cipher_ = _plaintext_ ^ _e_ % _n_** [Eq. 3] then one may decrypt with the private key as such **_plaintext_** = _cipher_^_d_ % _n_** [Eq. 4].
 
 ### Solution:
 Now, there's a philosophy I think is important with cryptography: never use your own processing power if you don't have to.
