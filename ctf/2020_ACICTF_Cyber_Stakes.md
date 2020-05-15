@@ -1,3 +1,9 @@
+---
+title: 2020 ACICTF Cyber Stakes
+layout: template
+filename: 2020_ACICTF_Cyber_Stakes.md
+---
+
 # 2020 ACICTF Cyber Stakes
 
 ## Crypto:
