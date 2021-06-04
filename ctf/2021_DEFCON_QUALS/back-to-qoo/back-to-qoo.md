@@ -37,7 +37,7 @@ Now, according to the rules of the CTF, you can't just brute-force spam/scan, so
 2
 ...
 ```
-for as many iterations as you want.  Then, you run the command nc back-to-qoo 5000 < myinputs.txt
+for as many iterations as you want.  Then, you run the command `nc back-to-qoo 5000 < myinputs.txt`.
 
 This is inefficient, as you won't know how to manipulate your qoin to achieve an 85% win rate - you'll have to get lucky.  If you leave this program up and sleep (bash: sleep) between iterations to avoid spamming the CTF problem, you can work on other things and eventually (or not) get a win.  If you do, you'll still need to use process.py to find the flag.  Happy hunting!
 
