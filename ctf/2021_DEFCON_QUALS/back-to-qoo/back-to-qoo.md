@@ -1,4 +1,4 @@
-## BACK TO QOO?
+## BACK TO QOO
 
 ### Prompt:
 You are pulled back to QOO again. QOO or OOO? Whatever.
