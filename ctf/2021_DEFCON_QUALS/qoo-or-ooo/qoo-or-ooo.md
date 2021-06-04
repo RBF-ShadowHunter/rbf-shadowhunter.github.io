@@ -345,9 +345,9 @@ This gives us the flag!
 ```
 
 ## References
-A. https://tqsd.github.io/QuNetSim/examples/quantum_coin_flipping.html
-B. https://tqsd.github.io/QuNetSim/examples/QKD.html
-C. https://tqsd.github.io/QuNetSim/examples/chsh.html
-D. https://en.wikipedia.org/wiki/CHSH_inequality
+- A. https://tqsd.github.io/QuNetSim/examples/quantum_coin_flipping.html
+- B. https://tqsd.github.io/QuNetSim/examples/QKD.html
+- C. https://tqsd.github.io/QuNetSim/examples/chsh.html
+- D. https://en.wikipedia.org/wiki/CHSH_inequality
 
 END
