@@ -25,13 +25,13 @@ After downloading and examining each file, the first thing to realize if it wasn
 
 In general, each of the above programs function as such:
 
-backend.py - manage chat connections, starts and stops "games" (QKD iterations)
-coin.py - a code-based representation of quantum coin-flipping
-game.py - interfaces with client connections and inputs and contains the Game class.
-players.py - performs qubit generation, measurement, and modification according to some quantum protocol (we'll discuss in a second) and contains the Player, Zardus, Adamd, and Hacker classes.
-service.py - manages win and loss results (this is where the game starts)
+- backend.py - manage chat connections, starts and stops "games" (QKD iterations)
+- coin.py - a code-based representation of quantum coin-flipping
+- game.py - interfaces with client connections and inputs and contains the Game class.
+- players.py - performs qubit generation, measurement, and modification according to some quantum protocol (we'll discuss in a second) and contains the Player, Zardus, Adamd, and Hacker classes.
+- service.py - manages win and loss results (this is where the game starts)
 
-**Terminology**
+**Terminology.**
 Some quick crypto and QKD terminology:
 - Alice: the sender
 - Bob: the receiver
@@ -39,12 +39,12 @@ Some quick crypto and QKD terminology:
 
 - qubit: quantum bit (0 or 1)
 - basis: pairs of orthogonal (rays at a 90-degree angle) states
-- eigenstate: a vector in a Hilbert space representative of a well-defined momentum with a quantum uncertainty of 0.  The four states of BB84 are {|↑⟩,|→⟩,|↗⟩,|↘⟩}.  For this problem, that means there's no doubt of a polarization measurement.
+- eigenstate: a vector in a Hilbert space representative of a well-defined momentum with a quantum uncertainty of 0.  The four states of BB84 are `{|↑⟩,|→⟩,|↗⟩,|↘⟩}`.  For this problem, that means there's no doubt of a polarization measurement.
 - rectilinear: a basis combination of 0 and 90 degrees
 - diagonal: a basis combination of 45 and 135 degrees
 - true randomization: quantum random number generation (QRNG) that produces a random number based on wholly indeterminate physical information of quantum states.
 
-**Overview of QKD**
+**Overview of QKD.**
 Closer examination of players.py reveals that the QKD protocol is akin to BB84, one of the simplest and oldest of QKD protocols.  BB84 polarizes photons to transmit information.  The summary of the BB84 process is below:
 - Alice generates two strings of n bits
 - Alice encodes each bit with a basis.  The encoding works as follows.  For a rectilinear eigenstate, a qubit value of 0 corresponds to a 0-degree polarization and a 1 corresponds to a 90-degree polarization.  For a diagonal eigenstate, qubit value 0 is encoded with 45 degrees while 135 degrees represents a 1.  These bit-basis combinations can be represented like so in bra-ket notation:
@@ -65,12 +65,12 @@ While this explanation is grossly oversimplified, it is the best fit for answeri
 We find that the flag is encoded in the player Adamd not only with BB84, but with AES in EAX mode, and Zardus and Adamd communicate the secret key and the flag.  Let's identify how we get from interacting with the game in game.py to being sent the AES-encrypted flag.
 
 Two more things looking at the source code.
-    1. A rough workflow is service.py > backend.py > [repeat this sequence for every iteration] service.py > game.py > players.py > game.py > coin.py > game.py > service.py
-    2. Adamd's secret key is the same as each of the bets that Zardus makes when he and the Hacker (we) win.  Keep reading to see how to find that information.
+1. A rough workflow is service.py > backend.py > [repeat this sequence for every iteration] service.py > game.py > players.py > game.py > coin.py > game.py > service.py
+2. Adamd's secret key is the same as each of the bets that Zardus makes when he and the Hacker (we) win.  Keep reading to see how to find that information.
 
 Now, we know we'll need to code a way to interface with qoo-or-ooo.challenges.ooo on port 5000, so we'll create a script that interacts with the challenge (where the flag is stored) and parses the output.  But before we do...
 
-**Getting to the Win**
+**Getting to the Win.**
 When interacting with the server, we can identify quickly that the server b
 
 game.py takes you through 1 or 2 prompts, depending on your first choice.  Prompt 1 asks you what you want to bet (0 or 1) or if you want to use your "magic qoin" (quantum coin flip).  If you select the qoin (option 2), then you get a second prompt: "Do you want to rotate your qoin before flipping?" and are presented with "0. No, do not rotate my qoin", "1. Yes, rotate left", and "2. Yes, rotate right".
