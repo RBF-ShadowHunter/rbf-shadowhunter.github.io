@@ -3,7 +3,7 @@ import hashlib
 import sys
 from time import sleep
 
-filename = "game_result.txt"
+filename = "output.txt"
 
 competitor1_text = ": Your competitor bets on "
 competitor2_text = ": zardus's competitor bets on "
